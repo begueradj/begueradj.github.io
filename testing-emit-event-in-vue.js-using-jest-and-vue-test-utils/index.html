@@ -9,7 +9,7 @@
 
   <title>Testing emit event in Vue.js using Jest and Vue Test Utils - Begueradj</title>
   <meta name="description" content="Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the emit event through the v-model directive. The aim of this article is to show how to test emit event using Vue Test Utils and Jest.
-This is the usual Vigenère cipher square where the upper horizontal columns contains the key’s alphabet whereas the most left vertical column corresponds to the alphabet of the message to cipher (or deciphered): Here is a text-like pseudo algorithm of the core Vigenere cipher function which can be better understood in practice by checking the code beneath it:">
+For this purpose, let us implement the below user interface which consists of a label Vuetify component reflecting what is being typed within the input field:">
   <meta name="author" content="Billal Begueradj"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -58,9 +58,9 @@ This is the usual Vigenère cipher square where the upper horizontal columns con
     "name" : "Billal Begueradj"
   },
   "headline": "Testing emit event in Vue.js using Jest and Vue Test Utils",
-  "description" : "Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the emit event through the v-model directive. The aim of this article is to show how to test emit event using Vue Test Utils and Jest.\nThis is the usual Vigenère cipher square where the upper horizontal columns contains the key’s alphabet whereas the most left vertical column corresponds to the alphabet of the message to cipher (or deciphered): Here is a text-like pseudo algorithm of the core Vigenere cipher function which can be better understood in practice by checking the code beneath it:",
+  "description" : "Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the emit event through the v-model directive. The aim of this article is to show how to test emit event using Vue Test Utils and Jest.\nFor this purpose, let us implement the below user interface which consists of a label Vuetify component reflecting what is being typed within the input field:",
   "inLanguage" : "en",
-  "wordCount":  358 ,
+  "wordCount":  380 ,
   "datePublished" : "2020-07-13T12:33:21",
   "dateModified" : "2020-07-13T12:33:21",
   "image" : "https:\/\/begueradj.github.io\/begueradj.png",
@@ -81,7 +81,7 @@ This is the usual Vigenère cipher square where the upper horizontal columns con
 
 <meta property="og:title" content="Testing emit event in Vue.js using Jest and Vue Test Utils" />
 <meta property="og:description" content="Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the emit event through the v-model directive. The aim of this article is to show how to test emit event using Vue Test Utils and Jest.
-This is the usual Vigenère cipher square where the upper horizontal columns contains the key’s alphabet whereas the most left vertical column corresponds to the alphabet of the message to cipher (or deciphered): Here is a text-like pseudo algorithm of the core Vigenere cipher function which can be better understood in practice by checking the code beneath it:">
+For this purpose, let us implement the below user interface which consists of a label Vuetify component reflecting what is being typed within the input field:">
 <meta property="og:image" content="https://begueradj.github.io/begueradj.png" />
 <meta property="og:url" content="https://begueradj.github.io/testing-emit-event-in-vue.js-using-jest-and-vue-test-utils/" />
 <meta property="og:type" content="website" />
@@ -247,7 +247,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;358&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;380&nbsp;words
   
   
     
@@ -274,87 +274,120 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         <p>Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the <code>emit</code> event through the <code>v-model</code> directive. The aim of this article is to show how to test <code>emit</code> event using Vue Test Utils and Jest.</p>
 
-<p>This is the usual Vigenère cipher square where the upper horizontal columns contains the key’s alphabet whereas the most left vertical column corresponds to the alphabet of the message to cipher (or deciphered):
-<img src="{filename}../images/vigenere_cipher.png" alt="Vigenère cipher square" /></p>
+<p>For this purpose, let us implement the below user interface which consists of a label Vuetify component reflecting what is being typed within the input field:</p>
 
-<p>Here is a text-like pseudo algorithm of the core Vigenere cipher function which can be better understood in practice by checking the code beneath it:</p>
+<p><img src="/emit_event.png" alt="file upload" /></p>
 
-<pre><code class="language-cmd">- Initialize the index of the key to 0
-- For each letter of the message:
-   - weight = weight of the letter in the alphabet
-   - if encryption then:
-       - weight = weight + weight of the corresponding letter in the secret key 
-   - else if decryption then:
-       - weight = weight - weight of the corresponding letter in the secret key
-   - weight = weight modulo 26
-   - if letter is lowercase then:
-       - append letter to the resulted text as it is
-   - else:
-       - capitalize the letter
-       - append the letter to the resulted text
-   - increment the index of the key
-   - reset the index of the key to zero if index is equal to the length of the key
+<p>I am going to use Nuxt.js with Vuetify to simplify the task.
+In <strong>pages/index.vue</strong>, we have this:</p>
+
+<pre><code class="language-html">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;v-row no-gutters&gt;
+      &lt;v-col cols=&quot;4&quot; class=&quot;d-flex justify-center align-center&quot;&gt;
+        {{ firstName }}
+      &lt;/v-col&gt;
+      &lt;v-col cols=&quot;8&quot;&gt;
+        &lt;custom-text-field v-model=&quot;firstName&quot; /&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import CustomTextField from '@/components/CustomTextField.vue'
+export default {
+  components: { CustomTextField },
+  data () {
+    return {
+      firstName: 'begueradj'
+    }
+  }
+}
+&lt;/script&gt;
 </code></pre>
 
-<p>Here is a Python 3 implementation sample:</p>
+<p>The content of <strong>components/CustomTextField.vue</strong> file we imported from within <strong>pages/index.vue</strong> is:</p>
 
-<pre><code class="language-python">import string
+<pre><code class="language-javascript">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;v-row&gt;
+      &lt;v-col cols=&quot;12&quot;&gt;
+        &lt;v-text-field v-model=&quot;firstName&quot; /&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
 
+&lt;script&gt;
+export default {
+  name: 'CustomTextField',
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    firstName: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.emitFirstName(value)
+      }
+    }
+  },
+  methods: {
+    emitFirstName (value) {
+      return this.$emit('input', value)
+    }
+  }
 
-class FileOperations:
-   def __init__(self):
-       pass
-   
-   def get_file_content(self, input_file):
-       with open(input_file,'r') as input_file:
-           return input_file.read()
-   
-   def save_to_file(self, output_file, content):
-       with open(output_file, 'w') as output_file:
-           output_file.write('{0}'.format(content))
+}
+&lt;/script&gt;
+</code></pre>
 
+<p>Above, we use a <code>computed</code> property to track <code>value</code> changes which should be emitted right away through <code>emitFirstName()</code> method. That is the less cumbersome and most efficient way that allows us to easy test the <code>emit</code> event:</p>
 
-class Vigenere:
- 
-   def __init__(self):
-       self.__SECRET_KEY = 'SOMELONGSECRETKEYGOESHERE'
-       self.file_operations = FileOperations()
-       self.__message = self.file_operations.get_file_content('plain.txt')
-      
-   def encrypt(self):
-       encrypted_text = self.__vigenere('encryption')
-       self.file_operations.save_to_file('encrypted.txt', encrypted_text)
+<pre><code class="language-javascript">import { mount } from '@vue/test-utils'
+import CustomTextField from '@/components/CustomTextField.vue'
 
-   def decrypt(self):
-       decrypted_text = self.__vigenere('decryption')
-       self.file_operations.save_to_file('decrypted.txt', decrypted_text)
+describe('CustomTextField', () =&gt; {
+  test('it emits expected data', () =&gt; {
+    const wrapper = mount(CustomTextField)
+    expect(wrapper.exists()).toBeTruthy()
+    wrapper.vm.emitFirstName('hello') // We emit data
+    expect(wrapper.emitted().input[0]).toEqual(['hello']) // Data is emitted with expected value 
+  })
+})
+</code></pre>
 
-   def __vigenere(self, flag):
-       transformed_text = []
-       index = 0
-       for letter in self.__message.upper():
-           weight = string.ascii_uppercase.find(letter)
-           if weight != -1:
-               if flag == 'encryption':
-                   weight += string.ascii_uppercase.find(self.__SECRET_KEY[index])
-               elif flag =='decryption':
-                   weight -= string.ascii_uppercase.find(self.__SECRET_KEY[index])
-               weight %= len(string.ascii_uppercase)
-               if letter.isupper():
-                   transformed_text.append(string.ascii_uppercase[weight])
-               elif letter.islower():
-                   transformed_text.append(string.ascii_uppercase[weight]).lower()
-               index += 1
-               if index == len(self.__SECRET_KEY):
-                   index = 0
-           else:
-               transformed_text.append(letter)
-       return ''.join(transformed_text)
-       
+<p>The test will pass:</p>
 
-if __name__ == '__main__':
-   vigenere = Vigenere()
-   vigenere.encrypt()
+<pre><code class="language-javascript">begueradj@begueradj:~/Development/Nuxt/nv1$ yarn test test/CustomTextField.spec.js 
+yarn run v1.22.4
+$ jest test/CustomTextField.spec.js
+ PASS  test/CustomTextField.spec.js
+  Logo
+    ✓ is a Vue instance (48ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.226s
+Ran all test suites matching /test\/CustomTextField.spec.js/i.
+Done in 3.19s.
+</code></pre>
+
+<p>For the test to run, there are dependencies to install and settings to put in place. You will find the related demo on <a href="https://github.com/begueradj/vuejs-test-emit-event">this Github repository</a>.</p>
+
+<p>Note the presence of <strong>test/setup.js</strong> file as recommended on Vuetify official documentation:</p>
+
+<pre><code class="language-javascript">import Vue from 'vue'
+import Vuetify from 'vuetify'
+
+Vue.use(Vuetify)
 </code></pre>
 
 
