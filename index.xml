@@ -5,10 +5,20 @@
     <link>https://www.begueradj.com/</link>
     <description>Recent content on Begueradj</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 12 Jan 2019 12:33:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 12:33:21 +0800</lastBuildDate>
     
 	<atom:link href="https://www.begueradj.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Testing emit event in Vue.js using Jest and Vue Test Utils</title>
+      <link>https://www.begueradj.com/testing-emit-event-in-vue.js-using-jest-and-vue-test-utils/</link>
+      <pubDate>Mon, 13 Jul 2020 12:33:21 +0800</pubDate>
+      
+      <guid>https://www.begueradj.com/testing-emit-event-in-vue.js-using-jest-and-vue-test-utils/</guid>
+      <description>Often we need to design a custom component which needs to communicate data with its parent. One way to achieve this is to rely on the emit event through the v-model directive. The aim of this article is to show how to test emit event using Vue Test Utils and Jest.
+This is the usual Vigenère cipher square where the upper horizontal columns contains the key’s alphabet whereas the most left vertical column corresponds to the alphabet of the message to cipher (or deciphered): Here is a text-like pseudo algorithm of the core Vigenere cipher function which can be better understood in practice by checking the code beneath it:</description>
+    </item>
     
     <item>
       <title>File upload from a Nuxt.js client to an AdonisJS RESTful API server using axios</title>
