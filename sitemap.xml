@@ -3,7 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.begueradj.com/</loc>
+    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.begueradj.com/categories/</loc>
+    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.begueradj.com/categories/development/</loc>
+    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.begueradj.com/file-upload-from-a-nuxt.js-client-to-an-adonisjs-restful-api-server-using-axios/</loc>
+    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.begueradj.com/post/</loc>
     <lastmod>2019-01-12T12:33:21+08:00</lastmod>
   </url>
   
@@ -39,6 +59,11 @@
   
   <url>
     <loc>https://www.begueradj.com/cryptojacking-cryptography-in-service-of-the-devil/</loc>
+    <lastmod>2018-01-07T12:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.begueradj.com/categories/security/</loc>
     <lastmod>2018-01-07T12:33:21+08:00</lastmod>
   </url>
   
@@ -112,37 +137,7 @@
   </url>
   
   <url>
-    <loc>https://www.begueradj.com/</loc>
-    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.begueradj.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.begueradj.com/categories/development/</loc>
-    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.begueradj.com/post/</loc>
-    <lastmod>2019-01-12T12:33:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.begueradj.com/categories/security/</loc>
-    <lastmod>2018-01-07T12:33:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.begueradj.com/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

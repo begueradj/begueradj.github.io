@@ -8,29 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>XML parsing with minidom - Begueradj</title>
-  <meta property="og:title" content="XML parsing with minidom" />
-  <meta name="twitter:title" content="XML parsing with minidom" />
   <meta name="description" content="This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1.
 Let us consider this XML data:
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;stock&gt; &lt;product id=&quot;p1&quot;&gt; &lt;title&gt;Product 1&lt;/title&gt; &lt;reference&gt;999-X&lt;/reference&gt; &lt;price&gt;20.10&lt;/price&gt; &lt;dimensions&gt; &lt;weight&gt;4&lt;/weight&gt; &lt;height&gt;50&lt;/height&gt; &lt;width&gt;20&lt;/width&gt; &lt;/dimensions&gt; &lt;/product&gt; &lt;product id=&quot;p2&quot;&gt; &lt;title&gt;Product 2&lt;/title&gt; &lt;reference&gt;999-B&lt;/reference&gt; &lt;price&gt;55.5&lt;/price&gt; &lt;dimensions&gt; &lt;weight&gt;3.99&lt;/weight&gt; &lt;height&gt;50&lt;/height&gt; &lt;width&gt;20&lt;/width&gt; &lt;/dimensions&gt; &lt;/product&gt; &lt;/stock&gt;  You can either save this as an XML file or consider it as a string.">
-  <meta property="og:description" content="This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1.
-Let us consider this XML data:
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;stock&gt; &lt;product id=&quot;p1&quot;&gt; &lt;title&gt;Product 1&lt;/title&gt; &lt;reference&gt;999-X&lt;/reference&gt; &lt;price&gt;20.10&lt;/price&gt; &lt;dimensions&gt; &lt;weight&gt;4&lt;/weight&gt; &lt;height&gt;50&lt;/height&gt; &lt;width&gt;20&lt;/width&gt; &lt;/dimensions&gt; &lt;/product&gt; &lt;product id=&quot;p2&quot;&gt; &lt;title&gt;Product 2&lt;/title&gt; &lt;reference&gt;999-B&lt;/reference&gt; &lt;price&gt;55.5&lt;/price&gt; &lt;dimensions&gt; &lt;weight&gt;3.99&lt;/weight&gt; &lt;height&gt;50&lt;/height&gt; &lt;width&gt;20&lt;/width&gt; &lt;/dimensions&gt; &lt;/product&gt; &lt;/stock&gt;  You can either save this as an XML file or consider it as a string.">
-  <meta name="twitter:description" content="This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1. …">
   <meta name="author" content="Billal Begueradj"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
     "name": "Begueradj",
     
-    "url": "https://www.begueradj.com"
+    "url": "https:\/\/www.begueradj.com"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://www.begueradj.com"
+  "url": "https:\/\/www.begueradj.com"
   
   
   
@@ -45,14 +39,14 @@ Let us consider this XML data:
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://www.begueradj.com",
+          "@id": "https:\/\/www.begueradj.com",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://www.begueradj.com/xml-parsing-with-minidom/",
+          "@id": "https:\/\/www.begueradj.com\/xml-parsing-with-minidom\/",
           "name": "X m l parsing with minidom"
         }
     }]
@@ -65,22 +59,20 @@ Let us consider this XML data:
     "name" : "Billal Begueradj"
   },
   "headline": "XML parsing with minidom",
-  "description" : "This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1.
-Let us consider this XML data:
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;stock&amp;gt; &amp;lt;product id=&amp;quot;p1&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Product 1&amp;lt;/title&amp;gt; &amp;lt;reference&amp;gt;999-X&amp;lt;/reference&amp;gt; &amp;lt;price&amp;gt;20.10&amp;lt;/price&amp;gt; &amp;lt;dimensions&amp;gt; &amp;lt;weight&amp;gt;4&amp;lt;/weight&amp;gt; &amp;lt;height&amp;gt;50&amp;lt;/height&amp;gt; &amp;lt;width&amp;gt;20&amp;lt;/width&amp;gt; &amp;lt;/dimensions&amp;gt; &amp;lt;/product&amp;gt; &amp;lt;product id=&amp;quot;p2&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Product 2&amp;lt;/title&amp;gt; &amp;lt;reference&amp;gt;999-B&amp;lt;/reference&amp;gt; &amp;lt;price&amp;gt;55.5&amp;lt;/price&amp;gt; &amp;lt;dimensions&amp;gt; &amp;lt;weight&amp;gt;3.99&amp;lt;/weight&amp;gt; &amp;lt;height&amp;gt;50&amp;lt;/height&amp;gt; &amp;lt;width&amp;gt;20&amp;lt;/width&amp;gt; &amp;lt;/dimensions&amp;gt; &amp;lt;/product&amp;gt; &amp;lt;/stock&amp;gt;  You can either save this as an XML file or consider it as a string.",
+  "description" : "This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1.\nLet us consider this XML data:\n\x26lt;?xml version=\x26quot;1.0\x26quot; encoding=\x26quot;UTF-8\x26quot;?\x26gt; \x26lt;stock\x26gt; \x26lt;product id=\x26quot;p1\x26quot;\x26gt; \x26lt;title\x26gt;Product 1\x26lt;\/title\x26gt; \x26lt;reference\x26gt;999-X\x26lt;\/reference\x26gt; \x26lt;price\x26gt;20.10\x26lt;\/price\x26gt; \x26lt;dimensions\x26gt; \x26lt;weight\x26gt;4\x26lt;\/weight\x26gt; \x26lt;height\x26gt;50\x26lt;\/height\x26gt; \x26lt;width\x26gt;20\x26lt;\/width\x26gt; \x26lt;\/dimensions\x26gt; \x26lt;\/product\x26gt; \x26lt;product id=\x26quot;p2\x26quot;\x26gt; \x26lt;title\x26gt;Product 2\x26lt;\/title\x26gt; \x26lt;reference\x26gt;999-B\x26lt;\/reference\x26gt; \x26lt;price\x26gt;55.5\x26lt;\/price\x26gt; \x26lt;dimensions\x26gt; \x26lt;weight\x26gt;3.99\x26lt;\/weight\x26gt; \x26lt;height\x26gt;50\x26lt;\/height\x26gt; \x26lt;width\x26gt;20\x26lt;\/width\x26gt; \x26lt;\/dimensions\x26gt; \x26lt;\/product\x26gt; \x26lt;\/stock\x26gt;  You can either save this as an XML file or consider it as a string.",
   "inLanguage" : "en",
-  "wordCount": 607,
+  "wordCount":  571 ,
   "datePublished" : "2017-04-23T12:33:21",
   "dateModified" : "2017-04-23T12:33:21",
-  "image" : "https://www.begueradj.com/begueradj.png",
+  "image" : "https:\/\/www.begueradj.com\/begueradj.png",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https://www.begueradj.com/xml-parsing-with-minidom/",
+  "mainEntityOfPage" : "https:\/\/www.begueradj.com\/xml-parsing-with-minidom\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://www.begueradj.com",
+    "name" : "https:\/\/www.begueradj.com",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://www.begueradj.com/begueradj.png",
+        "url" : "https:\/\/www.begueradj.com\/begueradj.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -96,24 +88,16 @@ Let us consider this XML data:
 <meta property="og:url" content="https://www.begueradj.com/xml-parsing-with-minidom/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Begueradj" />
+
   <meta name="twitter:title" content="XML parsing with minidom" />
   <meta name="twitter:description" content="This is a basic tutorial to introduce minidom. In fact, this is not really a tutorial but just a few list of notes about this library as there is already a short but good tutorial about it online1. …">
   <meta name="twitter:image" content="https://www.begueradj.com/begueradj.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://www.begueradj.com/begueradj.png' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://www.begueradj.com/begueradj.png" />
-  <meta name="twitter:image" content="https://www.begueradj.com/begueradj.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://www.begueradj.com/xml-parsing-with-minidom/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Begueradj" />
-
-  <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="alternate" href="https://www.begueradj.com/index.xml" type="application/rss+xml" title="Begueradj">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://www.begueradj.com/index.xml" type="application/rss+xml" title="Begueradj"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.begueradj.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.begueradj.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="https://www.begueradj.com/css/highlight.min.css" /><link rel="stylesheet" href="https://www.begueradj.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
@@ -123,15 +107,13 @@ Let us consider this XML data:
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-91013731-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
   </head>
@@ -267,10 +249,12 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;607&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;571&nbsp;words
   
   
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Billal Begueradj
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Billal Begueradj
+    
   
   
 </span>
@@ -382,39 +366,44 @@ u'stock'
 [&lt;DOM Text node &quot;'\n   '&quot;&gt;, &lt;DOM Element: product at 0x7f4550c59470&gt;, &lt;DOM Text node &quot;'\n   '&quot;&gt;, &lt;DOM Element: product at 0x7f4550c59930&gt;, &lt;DOM Text node &quot;'\n'&quot;&gt;]```
 
 Now things become clear: we see 3 additional Text children consisting of the new lines `\n` we did not think about. This is important to keep in mind when especially when you try to get values of certain child nodes:
-```python
+</code></pre>
+
+<p>python
 &gt;&gt;&gt; root.childNodes[0].nodeValue
-'\n   '
+&lsquo;\n   &lsquo;
 &gt;&gt;&gt; root.childNodes[1].nodeValue
 &gt;&gt;&gt; root.childNodes[1]
-&lt;DOM Element: product at 0x7f4550c59470&gt;
+<DOM Element: product at 0x7f4550c59470>
 &gt;&gt;&gt; root.childNodes[1].childNodes
-[&lt;DOM Text node &quot;'\n      '&quot;&gt;, &lt;DOM Element: title at 0x7f4550c59508&gt;, &lt;DOM Text node &quot;'\n      '&quot;&gt;, &lt;DOM Element: reference at 0x7f4550c595a0&gt;, &lt;DOM Text node &quot;'\n      '&quot;&gt;, &lt;DOM Element: price at 0x7f4550c59638&gt;, &lt;DOM Text node &quot;'\n      '&quot;&gt;, &lt;DOM Element: dimensions at 0x7f4550c596d0&gt;, &lt;DOM Text node &quot;'\n   '&quot;&gt;]
+[<DOM Text node "'\n      '">, <DOM Element: title at 0x7f4550c59508>, <DOM Text node "'\n      '">, <DOM Element: reference at 0x7f4550c595a0>, <DOM Text node "'\n      '">, <DOM Element: price at 0x7f4550c59638>, <DOM Text node "'\n      '">, <DOM Element: dimensions at 0x7f4550c596d0>, <DOM Text node "'\n   '">]</p>
+
+<pre><code>For example, let us display the tag name of the root’s child which has `id == p1`:
 </code></pre>
 
-<p>For example, let us display the tag name of the root’s child which has <code>id == p1</code>:</p>
+<p>python
+&gt;&gt;&gt; for child in root.childNodes:
+&hellip;     if child.childNodes:
+&hellip;             if child.hasAttribute(&lsquo;id&rsquo;) and child.getAttribute(&lsquo;id&rsquo;) == &lsquo;p1&rsquo;:
+&hellip;                     print(child.tagName)
+&hellip;
+product</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; for child in root.childNodes:
-...     if child.childNodes:
-...             if child.hasAttribute('id') and child.getAttribute('id') == 'p1':
-...                     print(child.tagName)
-... 
-product
-</code></pre>
-
-<p>One important thing to be aware of is that minidom is very memory consuming and I think this is due to the fact it is heavilty based on recursive functions. It can be handy only when processing small files of XML data.
+<pre><code>One important thing to be aware of is that minidom is very memory consuming and I think this is due to the fact it is heavilty based on recursive functions. It can be handy only when processing small files of XML data.
 An other thing to know is minidom does not support XPATH expressions.
-To remedy to the two forementioned drawbacks, it is recommended to use the <code>lxml</code> library.</p>
+To remedy to the two forementioned drawbacks, it is recommended to use the `lxml` library.
 
-<p>The library is quite well documented<sup><a href="#2">2</a></sup>. In case you do not have Internet access to check the documentation, you can always the most important minidom available functions by calling the XML Document object you created this way:</p>
-
-<pre><code class="language-python">dir(xml_doc)
+The library is quite well documented&lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In case you do not have Internet access to check the documentation, you can always the most important minidom available functions by calling the XML Document object you created this way:
 </code></pre>
 
-<p>And you can inspect an individual function (chosen from the list the forementioned line outputs) this way:</p>
+<p>python
+dir(xml_doc)</p>
 
-<pre><code class="language-python">help(xml_doc.getElementsByTagName)
+<pre><code>And you can inspect an individual function (chosen from the list the forementioned line outputs) this way:
 </code></pre>
+
+<p>python
+help(xml_doc.getElementsByTagName)
+```</p>
 
 <hr />
 
@@ -434,6 +423,47 @@ To remedy to the two forementioned drawbacks, it is recommended to use the <code
 
 <div class="share-box" aria-hidden="true">
     <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f&amp;text=XML%20parsing%20with%20minidom&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f&amp;title=XML%20parsing%20with%20minidom" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f&amp;title=XML%20parsing%20with%20minidom" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f&amp;title=XML%20parsing%20with%20minidom" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.begueradj.com%2fxml-parsing-with-minidom%2f&amp;description=XML%20parsing%20with%20minidom" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
     </ul>
   </div>
   
@@ -444,6 +474,7 @@ To remedy to the two forementioned drawbacks, it is recommended to use the <code
 
         
           
+
           
         
       </article>
@@ -473,7 +504,8 @@ To remedy to the two forementioned drawbacks, it is recommended to use the <code
   </div>
 </div>
 
-    <footer>
+      
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -508,23 +540,30 @@ To remedy to the two forementioned drawbacks, it is recommended to use the <code
           
             2019
           
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.begueradj.com">Begueradj</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
         </p>
       </div>
     </div>
   </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <script src="https://www.begueradj.com/js/main.js"></script>
 <script src="https://www.begueradj.com/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
-<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://www.begueradj.com/js/load-photoswipe.js"></script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.begueradj.com/js/load-photoswipe.js"></script>
 
 
 
@@ -534,6 +573,8 @@ To remedy to the two forementioned drawbacks, it is recommended to use the <code
 
 
 
+
+    
   </body>
 </html>
 
