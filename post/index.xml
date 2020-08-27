@@ -21,6 +21,16 @@ For this purpose, let us implement the below user interface which consists of a 
     </item>
     
     <item>
+      <title>How to use Moment.js with AdonisJs</title>
+      <link>https://begueradj.github.io/how-to-use-moment.js-with-adonisjs/</link>
+      <pubDate>Fri, 19 Apr 2019 12:33:21 +0800</pubDate>
+      
+      <guid>https://begueradj.github.io/how-to-use-moment.js-with-adonisjs/</guid>
+      <description>Preamble I decided to write this article following a question published yesterday on the AdonisJs community forum solliciting if there is a tutorial that shows how to use Moment.js in AdonisJs. I answered to that question yesterday, but I would like to share the information with others here.
+Do not try to install Moment.js because Adonis.js uses it internally. This means you can take any Moment.js instance and apply on it any Moment.</description>
+    </item>
+    
+    <item>
       <title>Effective file streaming using AdonisJs</title>
       <link>https://begueradj.github.io/effective-file-streaming-using-adonisjs/</link>
       <pubDate>Sun, 14 Apr 2019 12:33:21 +0800</pubDate>
