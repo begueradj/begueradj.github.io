@@ -1,122 +1,158 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Kabylialainen ruoka</title>
-		<link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-	</head>
-	<body>
-		<h1>Kabylialainen ruoka</h1>
-     
-		<section id="slide1">
-			<h2>Kabylialainen ruoka</h2>
-			<a class="next" href="#slide2"></a>
-			<span id="hint">Jatkaa &uarr;</span>
-			
-			<ul>
-				<li>Ruokamme on välimerellistä.</li>
-				<li>Kasvikset ovat tärkeitä.</li>
-				<li>Käytämme ruokaa lääkkeenä.</li>
-			</ul>
-		</section>
-	
-		<section id="slide2">
-			<h2>Ainesosat</h2>
-			<a class="prev" href="#slide1"></a>
-			<a class="next" href="#slide3"></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kabylialainen ruoka</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <style>
+/*
+   Source - https://stackoverflow.com/a/23951515
+     Posted by Elangovan, modified by community. See post 'Timeline' for change history
+   Retrieved 2026-04-09, License - CC BY-SA 4.0
+ */
 
-			<ul>
-			  <li>Vihannekset.</li>
-				<li>Oliiviöljy.</li>
-				<li>Mausteet.</li>
-				<li>kuivat viikunat, kvitteni ...etc</li>
-			</ul>
-		</section>
+.blink_text
+  {
+  animation:1s blinker linear infinite;
+  -webkit-animation:1s blinker linear infinite;
+  -moz-animation:1s blinker linear infinite;
+  color: powderblue;
+}
 
-		<section id="slide3">
-			<h2>Kansallisruokamme on kuskus.</h2>
-			<a class="prev" href="#slide2"></a>
-			<a class="next" href="#slide4"></a>
-			<img src="images/kuskus.png" style="display:block; margin:auto; width:50%;">
-		</section>
-		
-		<section id="slide4">
-			<h2>Suosittuja ruokia.</h2>
-			<a class="prev" href="#slide3"></a>
-			<a class="next" href="#slide5"></a>
-			<img src="images/abazine.jpg" style="display:block; margin:auto; width:50%;">
-		</section>
-		
-		<section id="slide5">
-			<h2>Suosittuja ruokia.</h2>
-			<a class="prev" href="#slide4"></a>
-			<a class="next" href="#slide6"></a>
-			<img src="images/tiasbanine.jpg" style="display:block; margin:auto; width:50%;">
-		</section>
-		
-		<section id="slide6">
-			<h2>Suosittuja ruokia.</h2>
-			<a class="prev" href="#slide5"></a>
-			<a class="next" href="#slide7"></a>
-			<img src="images/makrout.png" style="display:block; margin:auto; width:50%;">
-		</section>
-		
-		<section id="slide7">
-			<h2>Suosittuja ruokia.</h2>
-			<a class="prev" href="#slide6"></a>
-			<a class="next" href="#slide8"></a>
-			<img src="images/bread.png" style="display:block; margin:auto; width:50%;">
-		</section>
-		
-		<section id="slide8">
-			<h2>Ruokailu tulli.</h2>
-			<a class="prev" href="#slide7"></a>
-			<a class="next" href="#slide9"></a>
-			<p>Lapsesta asti olen syönyt lusikalla. Emme syö käsin. Syömme yhdessä. Vanhemmat syövät ensin. Sinä syöt vasta, kun vanhempi sisaruksesi alkaa syödä.</p>
-		</section>
-		
-		<section id="slide9">
-			<h2>Ruokailu tulli.</h2>
-			<a class="prev" href="#slide8"></a>
-			<a class="next" href="#slide10"></a>
-			<p>Joka vuosi maaliskuun 12. päivänä valmistamme erikoisruoan, joka on hieman kuskusin kaltainen. Käytämme sen valmistukseen myrkyllisiä ja tappavia vihanneksia (Thapsia). Se suojaa meitä kaikilta kevätallergioilta.</p>
-		</section>
-		
-		<section id="slide10">
-			<h2>Ruokamme/suomalainen ruoka.</h2>
-			<a class="prev" href="#slide9"></a>
-			<a class="next" href="#slide11"></a>
-			<p>Mustamakkara, veriohukaiset, veripalttu, verileipä, rössypottu ovat esimerkkejä ruoasta, jossa käytetään verta ja lihaa pitkien talvien vuoksi ja puuttuvien ainesosien korvaamiseksi.</p>
-		</section>
-		
-		 <section id="slide11">
-			<h2>Ruokamme/suomalainen ruoka.</h2>
-			<a class="prev" href="#slide10"></a>
-			<a class="next" href="#slide12"></a>
-			<p>Ruokafilosofiamme on erilainen: käytämme ruokaa lääkkeenä.</p>
-		</section>
-		
-		
-		<section id="slide12">
-			<h2>Ruokamme/suomalainen ruoka.</h2>
-			<a class="prev" href="#slide11"></a>
-			<a class="next" href="#slide13"></a>
-			<p>Suomea hallitsi suurimman osan historiastaan ​​joko Venäjä tai Ruotsi. Se on vastasyntynyt lapsi, joka etsii edelleen identiteettiään. Tämä heijastuu suomalaiseen makumaailmaan: suomalaiset pitävät salmiakista, koska he eivät osaa päättää suolan ja sokerin välillä. Suomi ei ole varma, mitä se haluaa. Se on teini-ikäinen, joka yrittää löytää polkunsa elämässä.</p>
-		</section>
-		
-		<section id="slide13">
-			<h2>Loppu.</h2>
-			<a class="prev" href="#slide12"></a>
-			<marquee>Kiitos.</marquee>
-		</section>
-		
-		<section id="start">
-			<a href="#slide1">Kabylialainen ruoka&hellip;</a>
-		</section>
-		
-		<aside id="time"></aside>
-	</body>
+    @-moz-keyframes blinker
+      {  
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+
+    @-webkit-keyframes blinker
+      {  
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+
+    @keyframes blinker
+      {  
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Kabylialainen ruoka</h1>
+
+    <section id="slide1">
+      <h2>Kabylialainen ruoka.</h2>
+      <a class="next" href="#slide2"></a>
+      <span id="hint">Jatkaa &uarr;</span>
+
+      <ul>
+        <li>Ruokamme on välimerellistä.</li>
+        <li>Kasvikset ovat tärkeitä.</li>
+        <li><span class="blink_text">Käytämme ruokaa lääkkeenä.</span></li>
+      </ul>
+    </section>
+
+    <section id="slide2">
+      <h2>Ainesosat</h2>
+      <a class="prev" href="#slide1"></a>
+      <a class="next" href="#slide3"></a>
+
+      <ul  class="achievements">
+        <li>Vihannekset.</li>
+        <li>Oliiviöljy.</li>
+        <li>Mausteet.</li>
+        <li>kuivat viikunat, kvitteni ...etc</li>
+      </ul>
+    </section>
+
+    <section id="slide3">
+      <h2>Kansallisruokamme on kuskus.</h2>
+      <a class="prev" href="#slide2"></a>
+      <a class="next" href="#slide4"></a>
+      <img src="images/kuskus.png" style="display:block; margin:auto; width:50%;">
+    </section>
+
+    <section id="slide4">
+      <h2>Suosittuja ruokia.</h2>
+      <a class="prev" href="#slide3"></a>
+      <a class="next" href="#slide5"></a>
+      <img src="images/abazine.jpg" style="display:block; margin:auto; width:50%;">
+    </section>
+
+    <section id="slide5">
+      <h2>Suosittuja ruokia.</h2>
+      <a class="prev" href="#slide4"></a>
+      <a class="next" href="#slide6"></a>
+      <img src="images/tiasbanine.jpg" style="display:block; margin:auto; width:50%;">
+    </section>
+
+    <section id="slide6">
+      <h2>Suosittuja ruokia.</h2>
+      <a class="prev" href="#slide5"></a>
+      <a class="next" href="#slide7"></a>
+      <img src="images/makrout.png" style="display:block; margin:auto; width:50%;">
+    </section>
+
+    <section id="slide7">
+      <h2>Suosittuja ruokia.</h2>
+      <a class="prev" href="#slide6"></a>
+      <a class="next" href="#slide8"></a>
+      <img src="images/bread.png" style="display:block; margin:auto; width:50%;">
+    </section>
+
+    <section id="slide8">
+      <h2>Ruokailu tulli.</h2>
+      <a class="prev" href="#slide7"></a>
+      <a class="next" href="#slide9"></a>
+      <p>Lapsesta asti olen syönyt lusikalla. Emme syö käsin. Syömme yhdessä. Vanhemmat syövät ensin. Sinä syöt vasta, kun vanhempi sisaruksesi alkaa syödä.</p>
+    </section>
+
+    <section id="slide9">
+      <h2>Ruokailu tulli.</h2>
+      <a class="prev" href="#slide8"></a>
+      <a class="next" href="#slide10"></a>
+      <p>Joka vuosi maaliskuun 12. päivänä valmistamme erikoisruoan, joka on hieman kuskusin kaltainen. Käytämme sen valmistukseen myrkyllisiä ja tappavia vihanneksia (Thapsia). Se suojaa meitä kaikilta kevätallergioilta.</p>
+    </section>
+
+    <section id="slide10">
+      <h2><marquee>Ruokamme/suomalainen ruoka.</marquee></h2>
+      <a class="prev" href="#slide9"></a>
+      <a class="next" href="#slide11"></a>
+      <p>Mustamakkara, veriohukaiset, veripalttu, verileipä, rössypottu ovat esimerkkejä ruoasta, jossa käytetään verta ja lihaa pitkien talvien vuoksi ja puuttuvien ainesosien korvaamiseksi.</p>
+    </section>
+
+    <section id="slide11">
+      <h2><marquee>Ruokamme/suomalainen ruoka.</marquee></h2>
+      <a class="prev" href="#slide10"></a>
+      <a class="next" href="#slide12"></a>
+      <p>Ruokafilosofiamme on erilainen: käytämme ruokaa lääkkeenä.</p>
+    </section>
+
+
+    <section id="slide12">
+      <h2><marquee>Ruokamme/suomalainen ruoka.</marquee></h2>
+      <a class="prev" href="#slide11"></a>
+      <a class="next" href="#slide13"></a>
+      <p>Suomea hallitsi suurimman osan historiastaan ​​joko Venäjä tai Ruotsi. Se on vastasyntynyt lapsi, joka etsii edelleen identiteettiään. Tämä heijastuu suomalaiseen makumaailmaan: suomalaiset pitävät salmiakista, koska he eivät osaa päättää suolan ja sokerin välillä. Suomi ei ole varma, mitä se haluaa. Se on teini-ikäinen, joka yrittää löytää polkunsa elämässä.</p>
+    </section>
+
+    <section id="slide13">
+      <h2>Loppu.</h2>
+      <a class="prev" href="#slide12"></a>
+      <marquee><span class="blink_text">Kiitos.</span></marquee>
+    </section>
+
+    <section id="start">
+      <a href="#slide1">Kabylialainen ruoka&hellip;</a>
+    </section>
+
+    <aside id="time"></aside>
+  </body>
 </html>
